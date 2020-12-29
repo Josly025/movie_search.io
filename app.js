@@ -1,19 +1,25 @@
-console.log("hello world");
-
 //API request
-fetch(
-  "https://movie-database-imdb-alternative.p.rapidapi.com/?s=Avengers%20Endgame&page=1&r=json",
-  {
-    method: "GET",
-    headers: {
-      "x-rapidapi-key": "cb5b1f2f44msh3ccf1d2e09978fap1363abjsn0c69cbf92586",
-      "x-rapidapi-host": "movie-database-imdb-alternative.p.rapidapi.com",
-    },
-  }
-)
-  .then((response) => {
-    console.log(response);
-  })
-  .catch((err) => {
-    console.error(err);
-  });
+import { http } from "./http";
+
+// Get movies
+http
+  .get(
+    "https://api.themoviedb.org/3/movie/550?api_key=ee632c2d76ec063fa122caf12fae9405"
+  )
+  .then((data) => console.log(data))
+  .catch((err) => console.log(err));
+
+// Create User
+// http.post('https://jsonplaceholder.typicode.com/users', data)
+//   .then(data => console.log(data))
+//   .catch(err => console.log(err));
+
+// Update Post
+// http.put('https://jsonplaceholder.typicode.com/users/2', data)
+//   .then(data => console.log(data))
+//   .catch(err => console.log(err));
+
+// Delete User
+// http.delete('https://jsonplaceholder.typicode.com/users/2')
+// .then(data => console.log(data))
+// .catch(err => console
