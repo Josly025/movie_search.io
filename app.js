@@ -11,55 +11,41 @@ search.addEventListener("click", function (e) {
 });
 
 function getMovies(inputValue) {
-  fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s=${inputValue}`)
+  fetch(`http://www.omdbapi.com/?apikey=${apiKey}&t=${inputValue}`)
     .then((response) => {
       return response.json();
     })
     .then((data) => {
       console.log(data);
-      let render = "";
-      data.Search.map(
-        (movie) =>
-          (render += `
-          <div class="card m-3">
-  <div class="card-body">
-    <h5 class="card-title">${movie.Title}</h5>
-    <h6 class="card-subtitle text-muted">Popularity: ${movie.popularity} Release Date: ${movie.Year}</h6>
-  </div>
-  <img
-    src=${movie.Poster}
-    class="thumbnail"
-  ></img>
-  <div class="card-body">
-    <p class="card-text">${movie.imbdID}</p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Cras justo odio</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Vestibulum at eros</li>
-  </ul>
-  <div class="card-body">
-    <a href="#" class="card-link">
-      Card link
-    </a>
-    <a href="#" class="card-link">
-      Another link
-    </a>
-  </div>
-</div>
-      
-      `)
-      );
+      console.log(data.Genre);
+
+      let movie = data;
+      let render = `
+     <div class="card m-5 " style="width: 25rem;">
+    <div class="card-body">
+      <h4 class="card-title text-success text-center">${movie.Title}</h4>
+      <hr>
+      <h6 class="card-subtitle text-success text-center"> Rated: ${movie.Rated} </h6>
+    </div>
+    <img
+      src="${movie.Poster}"
+      class="thumbnail justify-content-center"
+      width="auto" height="auto"
+    ></img>
+    <div class="card-body">
+      <p class="card-text text-success text-center">${movie.Plot}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item text-success text-center"> Actors: ${movie.Actors}</li>
+      <li class="list-group-item text-success text-center">Release Date: ${movie.Year} </li>
+      <li class="list-group-item text-success text-center">Runtime: ${movie.Runtime}</li>
+    </ul>
+    <div class="card-body text-center">
+    <button type="button" class="btn btn-outline-success"><a  class="text-success" href="http://imdb.com/title/${movie.imdbID}">
+        IMDB Page
+      </a></button>
+    </div>
+  </div>`;
       allMovies.innerHTML = render;
     });
-}
-
-//old html
-{
-  /* <div class="col-md-3"> 
-      <h6 class="text-success">${movie.title}<h6>
-    
-      <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" class="thumbnail">
-      <p>${movie.overview}<p>
-      </div> */
 }

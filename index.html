@@ -12,24 +12,40 @@
   </head>
   <body>
     <!--Nav-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-success">
-      <a class="navbar-brand text-success" href="#">Movie Search</a>
-     
-        </form>
-      </div>
-    </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand text-success" href="#">Movie Details</a>
+  
+  <div class="collapse navbar-collapse" id="navbarColor03">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">All Movies
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+  </div>
+</nav>
     <!--Search-->
-    <div class="form-group">
-  <label class="col-form-label col-form-label-lg ml-3" for="inputLarge">Search for Movies</label>
-  <input class="form-control form-control-lg" type="text" placeholder="The Dark Knight" id="inputLarge">
-</div>
-<button id="search" type="button" class="btn btn-success ml-3">Search</button>
-<!--Movies rendered-->
-<div class="container">
-  <div id="allMovies" class="row"> 
 
+   <div class="container">
+  <div class="row justify-content-center align-items-center p-3 "> 
+  <div class="col-sm form-group">
+  <label class="col-form-label col-form-label-lg text-white" for="inputLarge">Search for Movies by Title</label>
+  <input class="form-control form-control-lg text-success " type="text" placeholder="Insert Title Here..." id="inputLarge">
+  <div class="col-small justify-content-center ">
+    <button id="search" type="button" class="btn btn-success  m-3">Search</button>
   </div>
 </div>
+
+<!--Movies rendered-->
+<div class="container">
+  <div id="allMovies" class="row justify-content-center "> 
+  
+  </div>
+</div>
+  </div>
+</div>
+
+  
 <!--Card layout-->
 
 </div>
