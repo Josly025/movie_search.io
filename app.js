@@ -1,6 +1,7 @@
 const apiKey = "ee632c2d76ec063fa122caf12fae9405";
 const input = document.getElementById("inputLarge");
 const search = document.getElementById("search");
+const allMovies = document.getElementById("allMovies");
 
 search.addEventListener("click", function (e) {
   let inputValue = input.value;
@@ -18,5 +19,18 @@ function getMovies(inputValue) {
     })
     .then((data) => {
       console.log(data);
+      let render = "";
+      data.results.map(
+        (movie) =>
+          (render += `
+      <div class="col-md-3"> 
+      <h6 class="text-success">${movie.title}<h6>
+    
+      <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" class="thumbnail">
+        <p>${movie.overview}<p>
+      </div>
+      `)
+      );
+      allMovies.innerHTML = render;
     });
 }
