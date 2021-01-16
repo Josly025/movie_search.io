@@ -8,7 +8,7 @@ window.onload = startingValue();
 function startingValue() {
   const loadedValue = "Harry Potter";
 
-  fetch(`http://www.omdbapi.com/?apikey=${apiKey}&t=${loadedValue}`)
+  fetch(`https://www.omdbapi.com/?apikey=${apiKey}&t=${loadedValue}`)
     .then((response) => {
       return response.json();
     })
@@ -55,7 +55,7 @@ search.addEventListener("click", function (e) {
 });
 
 function getMovies(inputValue) {
-  fetch(`http://www.omdbapi.com/?apikey=${apiKey}&t=${inputValue}`)
+  fetch(`https://www.omdbapi.com/?apikey=${apiKey}&t=${inputValue}`)
     .then((response) => {
       return response.json();
     })
