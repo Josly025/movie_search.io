@@ -11,3 +11,24 @@ body {
   grid-column-gap: 10rem;
   grid-row-gap: 5rem;
 }
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (max-width: 400px) {
+  .nav {
+    width: 100%;
+  }
+
+  .navbar-brand {
+    margin-right: 6rem;
+  }
+
+  .col-md-4 {
+    width: 10rem;
+    margin-right: 18rem;
+  }
+}

@@ -7,47 +7,71 @@
       rel="stylesheet"
       href="https://bootswatch.com/4/cyborg/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" >
-    <link rel="stylesheet" href="./css/style.css"> 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Movie Search</title>
   </head>
   <body>
     <!--Jumbotron-->
     <div class="jumbotron">
-  <h1 class="display-5 text-success text-center"><i class="fas fa-ticket-alt mr-3"></i>Movie Search<i class="fas fa-film ml-3"></i></h1>
- 
-  <p class="lead text-center text-white">| Search for specific IMBD movies or view a list of several options |</p>
-  <div class="text-center">
-  <a type="link" href="./pages/allMovies.html" class="btn btn-outline-success ">All Movies</a>
-  </div>
-</div>
-   
+      <h1 class="display-5 text-success text-center">
+        <i class="fas fa-ticket-alt mr-3"></i>Movie Search<i
+          class="fas fa-film ml-3"
+        ></i>
+      </h1>
+
+      <p class="lead text-center text-white">
+        | Search for specific IMBD movies or view a list of several options |
+      </p>
+      <div class="text-center">
+        <a
+          type="link"
+          href="./pages/allMovies.html"
+          class="btn btn-outline-success"
+          >All Movies</a
+        >
+      </div>
+    </div>
+
     <!--Search-->
 
-   <div class="container">
-  <div class="row justify-content-center align-items-center p-3 "> 
-  <div class="col-sm form-group">
-  <label class="col-form-label col-form-label-lg text-white text-success" for="inputLarge">| Search for Movies by Title |</label>
-  <input class="form-control form-control-lg text-success " type="text" placeholder="Insert Title Here..." id="inputLarge">
-  <div class="col-small justify-content-center ">
-    <button id="search" type="button" class="btn btn-success  m-3">Search</button>
-  </div>
-</div>
+    <div class="container">
+      <div class="row justify-content-center align-items-center p-3">
+        <div class="col-sm form-group">
+          <label
+            class="col-form-label col-form-label-lg text-white text-success"
+            for="inputLarge"
+            >| Search for Movies by Title |</label
+          >
+          <input
+            class="form-control form-control-lg text-success"
+            type="text"
+            placeholder="Insert Title Here..."
+            id="inputLarge"
+          />
+          <div class="col-small justify-content-center">
+            <button id="search" type="button" class="btn btn-success m-3">
+              Search
+            </button>
+          </div>
+        </div>
 
-<!--Movies rendered-->
-<div class="container">
-  <div id="allMovies" class="row justify-content-center "> 
-  
-  </div>
-</div>
-  </div>
-</div>
+        <!--Movies rendered-->
+        <div class="container">
+          <div id="allMovies" class="row justify-content-center"></div>
+        </div>
+      </div>
+    </div>
 
-  
-<!--Card layout-->
-
-</div>
-
+    <!--footer-->
+    <footer>
+      <div class="text-center bg-success p-3 text-secondary">
+        Movie Search &copy;
+      </div>
+    </footer>
     <script src="app.js"></script>
   </body>
 </html>
