@@ -9,6 +9,7 @@ search.addEventListener("click", function (e) {
   getMovies(inputValue);
   e.preventDefault();
 });
+
 function getMovies(inputValue) {
   fetch(
     `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${inputValue}`
@@ -22,13 +23,23 @@ function getMovies(inputValue) {
       data.results.map(
         (movie) =>
           (render += `
-      <div class="col-md-3"> 
-      <h6 class="text-success">${movie.title}<h6>
-    
-      <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" class="thumbnail">
-        <p>${movie.overview}<p>
-      </div>
-      `)
+      <div class="col-md-4 "> 
+      <div class="card m-2" style="width: 25rem ;">
+    <div class="card-body">
+      <h4 class="card-title text-white text-center text-wrap">${movie.title}</h4>
+    </div>
+    <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" class="thumbnail justify-content-center"
+      width="auto" height="70%"></img>
+<div class="card-body">
+      <div class="card-body">
+      <p class="card-text text-success text-center text-wrap">Overview: <p>${movie.overview}<p></p>
+    </div>
+    </div>
+       <ul class="list-group list-group-flush">
+    <li class="list-group-item text-success text-center"> Popularity: <p>${movie.popularity}%<p></li>
+    </ul>
+    </div>
+  </div>`)
       );
       allMovies.innerHTML = render;
     });
