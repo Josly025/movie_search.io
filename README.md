@@ -1,5 +1,10 @@
 ### Title \*\*\*\* Movie Search
 
+
+## Image \*\*\*
+![moviesearch]("./images/movie_search.png")
+
+
 ## Description \*\*\*
 
     This application uses to different API's to find information based
@@ -54,6 +59,6 @@
 
 ## Project_Links \*\*\*
 
-![GitHub Repo](https://github.com/Josly025/movie_search.io.git)
+[GitHub Repo](https://github.com/Josly025/movie_search.io.git)
 
-![Deployed Link](https://josly025.github.io/movie_search.io/)
+[Deployed Link](https://josly025.github.io/movie_search.io/)
